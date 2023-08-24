@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Editor</title>
+        <link rel="icon" href="./favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="heading">
+            <h2>Basic Text Editor</h2>
+            <p>Creating, Collaborating, Captivating: The Ultimate Text Editor</p>
+        </div>
+        <div class="container">
+            <div class="part1">
+                <button id="ibold" class="bold"><i class="fas fa-bold" ></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="italic" class="bold"><i class="fas fa-italic"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="underline" class="bold"><img src="./underline.png" /></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="strike" class="bold"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="super" class="bold"><i class="fa fa-superscript" aria-hidden="true"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="sub" class="bold"><i class="fa fa-subscript" aria-hidden="true"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="erase" class="bold"><i class="fas fa-eraser"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="l" class="bold"><i class="fas fa-align-left"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="cen" class="bold"><i class="fas fa-align-center"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="r" class="bold"><i class="fas fa-align-right"></i></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="jus" class="bold"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            </div>
+            <br>
+            <div class="part2">
+                <select onchange="modify('fontName',this.value);">
+					<option value="Arial">Arial</option>
+					<option value="Verdana"> Verdana</option>
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Garamond">Garamond</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Courier New">Courier New</option>
+                    <option value= "cursive">cursive</option>
+				</select>&nbsp;&nbsp;
+               <div class="part">
+                <select onchange="modify('fontSize',this.value);">
+					<option value="1">2</option>
+					<option value="2">4</option>
+					<option value="3">6</option>
+					<option value="4">8</option>
+					<option value="5">10</option>
+					<option value="6">12</option>
+				</select>
+               </div>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="un" class="bold"><img src="./bullet.jpeg"/></button>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="o" class="bold"><img src="./numbering.png"/></button>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="und" class="bold"><i class="fa fa-undo" aria-hidden="true"></i></button>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="red" class="bold"><i class="fa fa-redo" aria-hidden="true"></i></button>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="out" class="bold"> <i class="fa fa-indent" aria-hidden="true"></i></button>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="cop" class="bold"> <i class="fas fa-copy"></i></button>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <button id="cu" class="bold"><i class="fa fa-cut"></i></button>
+            </div>
+            <br>
+            <div class="part3">
+                <label>Font:</label>
+                <input type="color" class="font" oninput="modify('foreColor', this.value);">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>HighLight:</label>
+                <input type="color" class="high" oninput="modify('hiliteColor', this.value);">
+            </div>
+            <br>
+            <div class="part4" contenteditable="true" spellcheck="false">
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
